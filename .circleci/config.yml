@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /go/src/github.com/yonoel/deployer
     docker:
-      - image: circleci/golang:latest
+      - image: circleci/golang:1.8
 
     environment:
       GO15VENDOREXPERIMENT: 1
@@ -11,7 +11,13 @@ jobs:
       - checkout
       - setup_remote_docker
 
-      - run: pip install awscli;
+      - run: 
+          name: install aws-cli
+          command: |
+            sudo apt-get update;
+            sudo apt-get install python3;
+            sudo apt-get install python-pip;
+            sudo pip install awscli;
       - run: echo 'export GOPATH_HEAD="$(echo ${GOPATH}|cut -d ':' -f 1)"' >> $BASH_ENV
       - run: echo 'export GOPATH_BASE="${GOPATH_HEAD}/src/github.com/${CIRCLE_PROJECT_USERNAME}"' >> $BASH_ENV
       - run: echo 'export DOCKER_REPO="$(if [ ${CIRCLE_PROJECT_USERNAME} == 'Securing-DevOps' ]; then echo securingdevops; else echo $DOCKER_USER; fi)"' >> $BASH_ENV
