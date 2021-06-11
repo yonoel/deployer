@@ -28,12 +28,17 @@ func main() {
 
 	// register routes
 	r := mux.NewRouter()
+	r.HandleFunc("/", getIndex).Methods("GET")
 	r.HandleFunc("/dockerhub", dplr.postWebHook).Methods("POST")
 	r.HandleFunc("/__heartbeat__", getHeartbeat).Methods("GET")
 	r.HandleFunc("/__version__", getVersion).Methods("GET")
 
 	// all set, start the http handler
 	log.Fatal(http.ListenAndServe(":8080", r))
+}
+
+func getIndex(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("I am alive"))
 }
 
 func (dplr *deployer) postWebHook(w http.ResponseWriter, r *http.Request) {
