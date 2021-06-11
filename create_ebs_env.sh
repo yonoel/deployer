@@ -39,6 +39,7 @@ aws elasticbeanstalk create-environment \
     --environment-name deployer-api \
     --description "deployer API environment" \
     --tags "Key=Owner,Value=$(whoami)" \
+    --option-settings file:///Users/yonoel/Desktop/mac-book/study/devops/deployer/ebs-options.json \
     --solution-stack-name "$dockerstack" \
     --option-settings file://./ebs-options.json \
     --tier "Name=WebServer,Type=Standard,Version=''" > tmp/$identifier/ebcreateapienv.json || fail
