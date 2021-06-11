@@ -42,6 +42,6 @@ jobs:
             docker push ${DOCKER_REPO}/${CIRCLE_PROJECT_REPONAME};
             aws configure set access_key ${AWS_USER_ID};
             aws configure set secret_key ${AWS_PASS};
-            aws configure list;
+            aws configure list|awk '{print $2}';
             aws elasticbeanstalk update-environment --region us-east-1 --application-name yonoel-invoicer --environment-id e-w3cpp666hd --version-label deployer-api
           
