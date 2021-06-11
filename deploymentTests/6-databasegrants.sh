@@ -1,4 +1,6 @@
-##!/bin/bash
+#!/bin/bash
+echo This is a test script that should always return successfully
+
 #grants="$(psql -U deployer \
 #        -h invoicer201605211320.czvvrkdqhklf.us-east-1.rds.amazonaws.com -p 5432 \
 #        invoicer -c '

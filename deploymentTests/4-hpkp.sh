@@ -1,4 +1,6 @@
-##!/bin/bash
+#!/bin/bash
+echo This is a test script that should always return successfully
+
 #EXPECTEDHPKP='Public-Key-Pins: max-age=1296000; includeSubDomains; pin-sha256="YLh1dUR9y6Kja30RrAn7JKnbQG/uEtLMkBgFF2Fuihg="; pin-sha256="++MBgDH5WGvL9Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI="'
 #SITEHPKP="$(curl -si https://invoicer.securing-devops.com/ |grep Public-Key-Pins | tr -d '\r\n' )"
 #if [ "${SITEHPKP}" == "${EXPECTEDHPKP}" ]; then

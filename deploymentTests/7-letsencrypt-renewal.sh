@@ -1,4 +1,6 @@
-##!/usr/bin/env bash
+#!/usr/bin/env bash
+echo This is a test script that should always return successfully
+
 #
 ## test the validity of the current certificate
 ## and only renew if expire in less than a month

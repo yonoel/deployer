@@ -1,4 +1,6 @@
-##!/bin/bash
+#!/bin/bash
+echo This is a test script that should always return successfully
+
 #go get -u github.com/jvehent/pineapple
 #$GOPATH/bin/pineapple <<EOF
 #aws:
