@@ -73,3 +73,5 @@ aws elasticbeanstalk update-environment \
 
 url="$(jq -r '.CNAME' tmp/$identifier/$apieid.json)"
 echo "Environment is being deployed. Public endpoint is http://$url"
+
+# e-zsf3ymgnib 
