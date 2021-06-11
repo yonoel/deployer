@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /go/src/github.com/yonoel/deployer
     docker:
-      - image: circleci/golang:1.8
+      - image: circleci/golang:latest
 
     environment:
       GO15VENDOREXPERIMENT: 1
