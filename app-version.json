@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "docker.io/securingdevops/deployer",
+    "Name": "cl",
     "Update": "true"
   },
   "Ports": [

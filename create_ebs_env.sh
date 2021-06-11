@@ -40,6 +40,7 @@ aws elasticbeanstalk create-environment \
     --description "deployer API environment" \
     --tags "Key=Owner,Value=$(whoami)" \
     --solution-stack-name "$dockerstack" \
+    --option-settings file://./ebs-options.json \
     --tier "Name=WebServer,Type=Standard,Version=''" > tmp/$identifier/ebcreateapienv.json || fail
 apieid=$(jq -r '.EnvironmentId' tmp/$identifier/ebcreateapienv.json)
 echo "API environment $apieid is being created"

@@ -1,0 +1,24 @@
+{
+    "Application": {
+        "ApplicationArn": "arn:aws:elasticbeanstalk:us-east-1:576133822094:application/deployer202106110835",
+        "ApplicationName": "deployer202106110835",
+        "Description": "deployer  202106110835",
+        "DateCreated": "2021-06-11T00:35:45.711Z",
+        "DateUpdated": "2021-06-11T00:35:45.711Z",
+        "ConfigurationTemplates": [],
+        "ResourceLifecycleConfig": {
+            "VersionLifecycleConfig": {
+                "MaxCountRule": {
+                    "Enabled": false,
+                    "MaxCount": 200,
+                    "DeleteSourceFromS3": false
+                },
+                "MaxAgeRule": {
+                    "Enabled": false,
+                    "MaxAgeInDays": 180,
+                    "DeleteSourceFromS3": false
+                }
+            }
+        }
+    }
+}
