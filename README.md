@@ -36,3 +36,5 @@ Next, still in main.go, replace the following code with your own, taken from the
 		VersionLabel:    aws.String("invoicer-api"),
 }
 ```
+
+注意要用自己的docker镜像地址，改了代码不提交到docker仓库，aws也拉不到啊
